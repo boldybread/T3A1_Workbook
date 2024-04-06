@@ -76,7 +76,6 @@ Provides a thorough explanation of type coercion in programming
 
 Provides a thorough explanation of data types in programming
 
-
 ## Q10 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
 Demonstrates an extensive ability to manipulate arrays
