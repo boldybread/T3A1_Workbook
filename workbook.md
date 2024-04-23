@@ -44,7 +44,31 @@ Multi-repo projects are useful for scaling along with the project as the codebas
 
 ## Q2 What are the most important aspects of quality software?
 
-List discuss and demonstrate 6 software quality characteristics
+To create a high quality application there are several characteristics that are important to aim for to make sure we are delivering robust code to a high standard resulting in a great product and user experience.
+
+### Reliability
+
+Reliability is how well software can run effectively over a period of time without experiencing bugs or degradation of any kind.
+
+### Maintainability
+
+Maintainability is the ease at which software and its code can be maintained during its period of use. This becomes harder and more complex as the code size increases as well as the code increasing in complexity or decreasing in consistency. Maintainability needs to be assessed by automated testing as well as human reviewers therefore it is vital that the code is testable and easy to understand.
+
+### Testability
+
+Which brings us on to testability which is how testable code is.
+
+### Portability
+
+Portability refers to how easily or well the software can be used in different enviroments such as on different platforms etc. Portability can be hard to measure but we can ensure portable code by testing on different platforms throughout the developement cycle, rather than waiting until the end of development. Coding standards help with portability.
+
+### Reusability
+
+Reusability is how easily reused the existing code is.
+
+### Security
+
+Sec
 
 ## Q3 Outline a standard high level structure for a MERN stack application and explain the components
 
@@ -304,9 +328,6 @@ console.log(bandObject); //{ name: 'Spiritbox', genre: 'Metal', country: 'Canada
 
 ## Q13 For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes
 
-Demonstrates an extensive ability to recognise functions, ranges and classes
-implied thing in lesson, explain that code, dont do anything else to it
-
 ```js
 // Define CAR class
 class Car {
@@ -365,6 +386,7 @@ for (model of models) {
 Safari, H 2020, 'How to use version control systems in large & multi-part software projects?', viewed 23 April 2024, https://www.linkedin.com/pulse/how-use-version-control-systems-large-multi-part-software-hadi-safari/
 
 ### Q2
+Bellairs, R 2019, 'What Is Code Quality? Overview + How to Measure Code Quality', viewed 23 April 2024, https://www.perforce.com/blog/sca/what-code-quality-overview
 
 ### Q3
 
@@ -393,4 +415,4 @@ Codehouse Dev Team, 2022, 'How to use object mainpulation in JavaScript', viewed
 
 ### Q12
 
-Tagliaferri, L 2022, 'How to use object mainpulation in JavaScript', viewed 23 April 2024, https://www.digitalocean.com/community/tutorials/how-to-work-with-json-in-javascript
+Tagliaferri, L 2022, 'How to use object manipulation in JavaScript', viewed 23 April 2024, https://www.digitalocean.com/community/tutorials/how-to-work-with-json-in-javascript
