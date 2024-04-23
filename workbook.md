@@ -2,27 +2,45 @@
 
 ## Q1 Provide an overview and description of a standard source control process for a large project
 
-Correct information in the answer, provided in general terms, including some irrelevant info. More specific detail would be good to see, e.g. what steps are involved in a source controle process?
-
 Large projects tend to be worked upon by many developers as well as having many features all being worked on simultaneously that potentially will change other functionality and potentially introduce bugs into the code. Therefore there needs to be a robust system in place that can control versions of the code to enable multiple people working on it at once without disrupting each other as well as offering the option to revert back to a previous version in case of catastrophic errors being introduced.
 
+I will discuss and compare two source control solutions that are typically used on large projects, mono-repo and multi-repo.
 
+### Mono-repo
 
+Mono repo or Monolithic Repository is the process in software development where all components of a project is stored in one repository. This is in contrast to the more traditional approach of having multiple repositories for different components (Multi-repo). Mono-repo setups store all relevant and related code including libraries, modules, applications, etc in one version control system for instance within Git repository. This can include both frontend and backend.
 
+#### Advantages of Mono-repo
 
-from T2 workbook A
+- Atomic commit & easier refactoring
+Since all developers share the same codebase it is easier to be consistent with the code
 
-Trunk-based development is one of the most popular version control methods which involves coders working on small parts of an application's code, and merging that frequently with the main branch or "trunk". This continuous integration ensures the project moves along at an optimum pace as it reduces the time developers would be waiting for other coders to complete work, so ultimately the project will be completed quicker and more efficiently.
+- Unified Versioning
+All components will be using compatible versions of libraries and dependancies
 
-Due to the small size of the frequent commits trunk-based development is easy to review as senior developers can quickly and efficiently review these small updates to the code, again improving that continuous integration and overall efficiency.
+- Flexible Collaboration
+As all developers have access to the same code this allows simplified collaboration promoting knowledge sharing and easier code reviews.
 
-The practice of trunk-based development is built upon frequent consistent commits therefore it is best practice to develop small batches of code and committing them daily to the main branch. These small batches of code also promote a quicker review process as senior developer can easily see the desired effect in a few lines of code and troubleshoot or approve as necessary.
+- Easier Integration Test
+CI and CD pipelines can be set up more efficiently allowing any changes to any part of codebase to start automated tests and deployments for the entire repo.
 
-Another standard practice is using feature flags which are if-statements that allow a certain feature to be turned on or off, this reduces the chance of code errors effecting the whole application when many coders are working on a project at once. This again improves the speed and efficiency of the project.
+### Multi-repo
 
-Another practice that has become standard to achieve continuous integration is the implementation of automated testing. Automated testing works smoothly with trunk-based development by checking the small batches of code that have been committed to the main branch and approving or denying them automatically depending on whether there are any issues or not. As you can see this would greatly speed up the process as it doesn't rely on a senior developer having to review and approve every small change to the project. These immediate approvals ensure the developers can move straight on to the next bit of code they want to work on, and that other coders are always working on the most updated code. It also means senior developers are free to focus on optimising the code rather than wasting time fixing up incorrect code.
+Transversely Multi-repos (multiple repositories) are the approach of developing each part of a project in a separate repository. Each component uses its own independent version control system. Each repo contains its own codebase meaning frontend applications and backend services as well as libraries, scripts and documentation are all kept in separate repos.
 
-Best practice in trunk-based development involves deleting branches after a merge has been completed. We want to aim to have three of fewer active branches in the project's repository. If developers are ensuring they are completing daily merges to the main branch there is no reason to keep old branches around that have become inactive.
+#### Advantages of Multi-repo
+
+- Ease of access
+With different components being operated independently it is easy to access the particular code for the relevant feature you are trying to work on. This can promote cleaner codebases and more modular development practices.
+
+- Ownership
+The decentralisation allows different individuals or teams to have clear ownership over a certain feature or components which is particularly useful in very large projects.
+
+- Flexibility
+It is easy for different teams to employ different languages or technologies in their approach to their project component allowing for innovation and experimentation.
+
+- Scalability
+Multi-repo projects are useful for scaling along with the project as the codebase grows as new repos can be added at any point without impacting existing ones.
 
 ## Q2 What are the most important aspects of quality software?
 
@@ -155,20 +173,196 @@ console.log(newNums) // [1, 2, 3]
 
 ## Q11 Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
 
+Accessing object properties can be done with either dot notation or bracket notation.
 
+```js
+var bands = {
+    name: "Spiritbox",
+    genre: "Metal",
+    country: "Canada",
+    members: 4
+};
+
+console.log(bands.country); // Canada
+/* dot notation - objectName.propertyName*/
+
+console.log(bands['country']); // Canada
+/* bracket notation - objectName['propertyName']*/
+```
+
+To manipulate objects in JS we use object methods which are properties containing a function definition such as:
+
+### Object.values()
+
+A developer uses object.values() when they need to return an array containing the object's own values.
+
+```js
+var bands = {
+    name: "Spiritbox",
+    genre: "Metal",
+    country: "Canada",
+    members: 4
+};
+
+var vals = Object.values(bands)
+console.log(vals); // [ 'Spiritbox', 'Metal', 'Canada', 4 ]
+```
+
+### Object.keys()
+
+Object.keys() can be used by a developer when they want to return an array of an objects' own properties.
+
+```js
+var bands = {
+    name: "Lorna Shore",
+    genre: "Deathcore",
+    country: "US",
+    members: 5
+};
+
+var keys = Object.keys(bands)
+console.log(keys); // [ 'name', 'genre', 'country', 'members' ]
+```
+
+### Object.freeze()
+
+Objects can be frozen with Object.freeze() which prevents any properties being added or removed from them. Object.isFrozen() can be used to see if an object is frozen.
+
+```js
+var bands = {
+    name: "The Amity Affliction",
+    genre: "Metal",
+    country: "Australia",
+    members: 5
+};
+
+Object.freeze(bands);
+console.log(Object.isFrozen(bands)); // true
+```
+
+### Object.seal()
+
+Similarly to Object.freeze(), Object.seal() will also prevent you from adding or removing properties to an object, however it differs because you can still change the values of an already existing property. Using Object.isSealed() will check to see if the object is currently sealed.
+
+```js
+var bands = {
+    name: "Make Them Suffer",
+    genre: "Metalcore",
+    country: "Australia",
+    members: 5
+};
+
+Object.seal(bands);
+console.log(Object.isSealed(bands)); // true
+```
 
 ## Q12 Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-Demonstrates an extensive ability to manipulate JSON
+A developer can manipulate JSON in JS by adding or modifying properties within JS objects by parsing JSON. As discussed in the previous question properties can be modified by either dot or square bracket notation.
+
+```js
+var bands = {
+    name: "Spiritbox",
+    genre: "Metal",
+    country: "Canada",
+    members: 4
+};
+
+/* To access any of this data we can use dot notation*/
+console.log(bands.name) //Spiritbox
+console.log(bands.members) //4
+
+/* We can also use square bracket notation*/
+console.log(bands['name']) //Spiritbox
+console.log(bands['members']) //4
+```
+
+### JSON.stringify()
+
+One useful function at the disposal of developers is the stringify() function which allows us to convert an object into a JSON string. This enables us to move data from a client to a server in an easy lightweight way.
+
+```js
+var bands = {
+    name: "Spiritbox",
+    genre: "Metal",
+    country: "Canada",
+    members: 4
+};
+
+var bandString = JSON.stringify(bands)
+console.log(bandString); //{"name":"Spiritbox","genre":"Metal","country":"Canada","members":4}
+```
+
+### JSON.parse()
+
+Suppose we have transported our JSON string and we need to now convert it back into a JSON object, we do that using the JSON.parse() function. Lets look at our example from above again and convert bandString back to a JSON object.
+
+```js
+var bandObject = JSON.parse(bandString)
+console.log(bandObject); //{ name: 'Spiritbox', genre: 'Metal', country: 'Canada', members: 4 }
+```
 
 ## Q13 For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes
 
 Demonstrates an extensive ability to recognise functions, ranges and classes
 implied thing in lesson, explain that code, dont do anything else to it
 
+```js
+// Define CAR class
+class Car {
+    // Constructor to initilise car BRAND
+  constructor(brand) {
+    this.carname = brand;
+  }
+  // Method PRESENT returns a string "I have a" combined with the brand of car owner by user
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+// Define MODEL class that extends CAR
+class Model extends Car {
+    // Constructor to initialise BRAND, MODEL of CAR
+  constructor(brand, mod) {
+    // Call the constructor of the parent class CAR with the brand parameter
+    super(brand);
+    this.model = mod;
+  }
+  // Method to return STR concatnating PRESENT string with "it was made in" + MODEL
+  show() {
+    return this.present() + ', it was made in ' + this.model;
+  }
+}
+
+// declare array of car MAKES
+let makes = ["Ford", "Holden", "Toyota"]
+// declare array of car MODELS from 1980 to 2019
+let models = Array.from(new Array(40), (x,i) => i + 1980)
+
+// Function to generate a random integer between a given range
+function randomIntFromInterval(min,max) { // min and max included
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+// Loop through each MODEL in MODELS array
+for (model of models) {
+
+// Randomly select a MAKE from the MAKES array
+  make = makes[randomIntFromInterval(0,makes.length-1)]
+// Randomly select a MODEL from the MODELS array
+  model = models[randomIntFromInterval(0,makes.length-1)]
+
+// Create an instance MYCAR using the MODEL class with a random MAKE and MODEL
+  mycar = new Model(make, model);
+// Display MYCAR
+  console.log(mycar.show())
+}
+```
+
 ## References
 
 ### Q1
+Safari, H 2020, 'How to use version control systems in large & multi-part software projects?', viewed 23 April 2024, https://www.linkedin.com/pulse/how-use-version-control-systems-large-multi-part-software-hadi-safari/
 
 ### Q2
 
@@ -190,11 +384,13 @@ Duggal, N 2024, 'What is MERN stack? All you need to know', viewed 6 April 2024,
 ### Q9
 
 ### Q10
-Ayodeji, B 2019, 'How to Manipulate Arrays in JavaScript', viewed 23 April 2024,https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
+
+Ayodeji, B 2019, 'How to Manipulate Arrays in JavaScript', viewed 23 April 2024, https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
 
 ### Q11
 
+Codehouse Dev Team, 2022, 'How to use object mainpulation in JavaScript', viewed 23 April 2024, https://www.codehousegroup.com/au/insights/how-to-use-object-manipulation-in-javascript
+
 ### Q12
 
-### Q13
-
+Tagliaferri, L 2022, 'How to use object mainpulation in JavaScript', viewed 23 April 2024, https://www.digitalocean.com/community/tutorials/how-to-work-with-json-in-javascript
