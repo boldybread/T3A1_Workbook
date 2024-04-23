@@ -78,11 +78,84 @@ Provides a thorough explanation of data types in programming
 
 ## Q10 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-Demonstrates an extensive ability to manipulate arrays
+An array in JS is a variable that is used to store data types for example:
+
+```js
+let arrayName = ["Brad", 2, 37, true];
+/* let declares variable - different datatypes allowed */
+```
+
+There are many different methods useful for manipulated an array in various ways, we will look at some of the more commonly used ones here. For instance an array can be converted to a string by either the toString() method or the join() depending on whether you want the string to be separated by a comma or something else. We can also use the concat() method to combine two arrays together.
+
+```js
+let arrayName = ["Brad", 2, 37, true];
+
+console.log(arrayName.toString()); // Brad,2,37,true
+```
+
+```js
+let arrayName = ["Brad", 2, 37, true];
+
+console.log(arrayName.join('-')); // Brad-2-37-true
+```
+
+```js
+let firstArray = [1, 2];
+let secondArray = [3, 4, 5];
+
+let combinedArray = firstArray.concat(secondArray);
+console.log(combinedArray); // [1, 2, 3, 4, 5]
+```
+
+### Adding/Removing Items from an Array
+
+We can push() to add an item to the end of an array or pop() to remove the last item from our array. Using shift() we can remove the first item from a list and return it or with unshift() we can add an item to the start of the array.
+
+```js
+let myAnimals = ["bear", "wolf", "dog"];
+myAnimals.push("koala", "lion"); // add these two to the end of the array
+console.log(myAnimals); // ["bear", "wolf", "dog", "koala", "lion"]
+
+myAnimals.pop(); // "lion" 
+/* Removes "lion" and returns it*/
+console.log(myAnimals) // ["bear", "wolf", "dog", "koala"]
+
+myAnimals.shift(); // "bear"
+/* Removes the first item "bear" from the array and returns it */
+console.log(myAnimals) // ["wolf", "dog", "koala"]
+
+myAnimals.unshift("bear");
+/* adds "bear" to the start of the array and changes the original array */
+console.log(myAnimals) // ["bear", "wolf", "dog", "koala"]
+```
+
+Alternatively we can use splice() to change an array by adding, removing or inserting elements. the method slice() will allow a developer to copy and return a section of an array without changing the original array.
+
+```js
+let team = ["fred", "gary", "kate", "lucy", "max"];
+team.splice(0, 3); // deletes ["fred", "gary", "kate",]
+/* 0 represents the index to start removing from, the 3 is how many elements to delete */
+console.log(team); // ["lucy", "max"]
+```
+
+```js
+let team = ["fred", "gary", "kate", "lucy", "max"];
+team.splice(5, 0, "Joel", "Ella", "Rose"); // adds "Joel", "Ella", "Rose"
+/* 5 represents the index to start from, the 0 is how many elements to delete, because this delete count is 0 we add the following items at index [5] */
+console.log(team); // ["fred", "gary", "kate", "lucy", "max", "Joel", "Ella", "Rose"]
+```
+
+```js
+let nums = [1, 2, 3, 4]
+let newNums = nums.slice(0, 3)
+/* selects and returns elements between index [0] and [3] not including the [3] index which is the element 4 here to a new variable we have created */
+console.log(nums) // [1, 2, 3, 4]
+console.log(newNums) // [1, 2, 3]
+```
 
 ## Q11 Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-Demonstrates an extensive ability to manipulate objects
+
 
 ## Q12 Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
 
@@ -117,6 +190,7 @@ Duggal, N 2024, 'What is MERN stack? All you need to know', viewed 6 April 2024,
 ### Q9
 
 ### Q10
+Ayodeji, B 2019, 'How to Manipulate Arrays in JavaScript', viewed 23 April 2024,https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
 
 ### Q11
 
