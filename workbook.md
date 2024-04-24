@@ -96,7 +96,33 @@ The client directory contains the frontend code of the web application typically
 
 ## Q4 A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
-Effectively describes a range of skills and knowledge required by IT workers to complete a quality web development project
+A team would require the knowledge of whatever the small business' customer base is and what the product is that they are trying to sell. Is the business trying to reach more customers or make it easier/more accessible to acquire their services/product. With this knowledge you can tailor the website to focus around that product or service. How intuitive or interactive does it need to be? Another knowledge condisderation is the values the business has and what image they are trying to project on their website. Will they require a sleek corporate website to impress higher end clientele, will they want a colourful interactive page to attract families?
+
+Other than these customer requirements the important knowledge and skills required for a team of web developers include the following:
+
+### Communication
+
+Perhaps the most important skill required of a developer especially a team of devs is communication skills. This is required specifically when working together on a large project, maybe the individual devs are building separate features but those features need to function with each other therefore it is imperative that the team is communicating and using the same coding standards and practices as well as appropriate testing at each step of the development to ensure seamless results. Of course as discussed previously the first knowledge the team should be discovering is exactly what the client wants built for their company, if the team has poor communication they will struggle to engage the client and learn exactly what they are hoping to be delivered to them at the end.
+
+### Version Control
+
+We have discussed previously version control practices so it is easy to see why this would be essential knowledge and skills for our team of devs. The bigger the team the more separate features that are going to be built across different repos, without appropriate knowledge of how to use version control the development is going to be slow and riddled with compatibility errors. A well organised team will have seamless version control practices allowing a senior dev an easier time monitoring, managing and modifying any new features, codebases or changes to the project. Version control also allows the senior dev the option to reject changes or revert to previous versions so that all work is not lost.
+
+### Software Testing
+
+Software testing will be of key importance to the team of web devs as the client will expect a robust finished product that will work as required over the period of time that it is expected to perform as such. The devs will need to ensure that enough testing is carried out that any potential bugs or errors can be found and rectified before users start using the product as otherwise this can cause damage to the customer's company and therefore the development team's reputation. Good software testing should require a mix of both manual testing and automated testing to really push and test the limits of the product.
+
+### Coding Skills
+
+One obvious fundamental skill set required by any web dev team will be coding skills. Both frontend and backend may be needed for the project so there needs to be a range of those skills in the team either with full stack devs or frontend/backend specialists. All devs should be familiar with which ever tools are used by the team such as VS Code, Git, Github etc, and there needs to be a solid grasp of whichever programming language is required whether that be a frontend one like HTML/JS, or a backend one like Python or Ruby.
+
+### Problem Solving
+
+The team will require solid problem solving skills, any web dev project can be challenging and require the solution of complex problems depending on the complexity and requirement of the website to be built. The devs require an analytical mind to allow for optimizing and debugging the code that they are producing.
+
+### Time Management
+
+Time management is another often overlooked skill that needs to be a core attribute to a web dev team. Usually a ssenior dev will be in charge of the project management to make sure the team is keeping up with timelines as they hit milestones. They will understand the expectations of the client when it comes to completion time of the project. Whilst a overly complex website will take more time there will still be an expectation from a customer to have a completed finished product within a reasonable time.
 
 ## Q5 With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
@@ -395,6 +421,8 @@ Amankwah, K 2023, 'MERN Stack Project Structure: Best Practices', viewed 6 April
 Duggal, N 2024, 'What is MERN stack? All you need to know', viewed 6 April 2024, https://www.simplilearn.com/tutorials/mongodb-tutorial/what-is-mern-stack-introduction-and-examples
 
 ### Q4
+
+LinkedIn 2024, 'You're a web developer and you want to be successful. What skills do you need to have?', viewed 24 April 2024, https://www.linkedin.com/advice/1/youre-web-developer-you-want-successful-what-skills-xxnfe
 
 ### Q5
 
