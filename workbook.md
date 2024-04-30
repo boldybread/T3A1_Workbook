@@ -126,11 +126,32 @@ Time management is another often overlooked skill that needs to be a core attrib
 
 ## Q5 With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
-Effectively describes a range of skills and knowledge used to complete a project.
+In my Portfolio project I built a webpage communicating my personality, skills and projects to a prospective client. This required web development skills, in particular HTML and CSS. I would have liked to have some JS experience for this but I didn't have any at the time of the project. HTML skills allowed me to create the structure of the website as well as the content. CSS allowed me to style those pages and change the layout to how I wanted it, CSS also helped me create a webpage with responsive design, it was important to me to create something that could be viewed properly on a desktop, a phone, or a tablet which was a challenge I had to overcome. I had to design and code the website to allow for different screen sizes using CSS media queries to make sure the webpage looked good on any screen.
+
+Another skill I had to utilise was version control, I used github, this allowed me to commit changes along the way in the project this helped me manage and track the changes I was making in case of introducing bugs or errors. Github also offers another platform to showcase my talents to a would be client. I had to have some knowledge of typography principles to help style fonts on the website. To make my portfolio accessible I needed to host the website, this was a challenge as I had never done this before, but I was able to use Netlify to help me host the portfolio which was simple to use.
+
+Some of the soft skills that were required for this project were:
+
+- Creativity
+Coming up with something attention grabbing, unique that showcased my skills.
+
+- Attention to detail
+Avoiding typos or other small mistakes, making sure alignment and spacing was correct
+
+- Time management
+I had to make sure I was efficient with my time as I only had two weeks to create it so I needed to make sure I worked on different aspects of the website without getting too caught up on one aspect.
+
+- Communication
+With communication being such a vital skill in the coding world I needed to make sure that I was communicating my knowledge and skills effectively in my portfolio to attract a potential client.
 
 ## Q6 With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
-Evaluates effectiveness of knowledge and skills accurately, providing examples, and providing an insightful improvement on each skill
+In my Portfolio project I built a webpage containing my resume and various projects I had completed such as a blog with the aim of showcasing my talents as a developer to a would be client. The website was built using HTML and CSS and at the time those skills were very limited as I was new to coding. If I was to tackle the project now I would be able to better achieve my vision on the website, for instance the image on my home page was designed to change size depending on the screensize viewing the page, but I struggled with keeping the image centered on different screensizes as they changed. Now with my knowledge of CSS I would be able to fix this without issue for instance by using Bootstrap CSS which is a CSS framework designed to help develop in HTML JS & CSS.
+
+Also at the time of working on the portfolio I had no knowledge of JS at all, I really wanted to have a typewriter effect on the homepage and it was difficult for me to do without the JS knowledge and I couldnt get it quite right. With my current JS knowledge I would not only be able to fix this but also improve the interactivity of the website by employing more JS and improving the usability and functionality. I would be able to add animations and effects to my website that wouldn't otherwise be possible. I could dynamically update content on my website without reloading the entire page, this would allow me to create a news feed or chat application rather than the generic contact form which was all I was able to create on my original portfolio without the use of JS.
+
+I hosted my website through Netlify, I now know how to easily host a website through github so I would use that if I was to recreate this project.
+Lastly I feel with my current knowledge and skills I could improve the efficiency of my website optimizing performance by using techniques such as efficient selectors, minimising CSS file size and leveraging CSS sprites as well as simply reducing any redundant code.
 
 ## Q7 Explain control flow, using an example from the JavaScript programming language
 
