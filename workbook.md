@@ -155,15 +155,166 @@ Lastly I feel with my current knowledge and skills I could improve the efficienc
 
 ## Q7 Explain control flow, using an example from the JavaScript programming language
 
-Provides a thorough explanation of control flow in programming
+Control flow is how a computer runs code, generally from top to bottom unless it encounters a statement that will change the control flow for instance loops, conditionals or functions. It is essential for a developer to understand how a computer will interpret code and the order in which it will do so to make sure your code is achieving what you want it to.
+
+### Loops
+
+Loops are statements that cause the program to iterate through and keep running until a condition becomes false, or there is nothing left to loop over.
+
+```js
+const favouriteFruits = ["Blueberries", "Pears", "Plums", "Peaches"];
+
+let text = "";
+for (let i = 0; i < favouriteFruits.length; i++) {
+  text += favouriteFruits[i] + " are yum! ";
+}
+
+console.log(text)
+// Blueberries are yum! Pears are yum! Plums are yum! Peaches are yum! 
+
+```
+
+### Conditionals
+
+Conditional statements such as if, else, else if and switch statements can be used to control the flow in JS. The code will continue running while that condition is met or not met. For instance:
+
+```js
+hungry = true
+if (hungry == true) {
+ console.log('We are hungry! lets eat something!');
+}
+else {
+  console.log('We are full!')
+}
+// We are hungry! lets eat something!
+```
+
+By making variable hungry = true we have controlled the flow forcing the code to produce the desired outcome "We are hungry! lets eat something!"
+
+### Functions
+
+Lastly functions are blocks of code that can be called usually taking in one or more arguments and optionally returning a value.
+
+```js
+let sum = myFunction(2, 3);
+
+function myFunction(a, b) {
+// Function returns the sum of a and b
+  return (a + b);
+}
+console.log(sum) // 5
+```
+
+All of these statements discussed effect control flow because they pause the flow of code execution until the conditions are met.
 
 ## Q8 Explain type coercion, using examples from the JavaScript programming language
 
-Provides a thorough explanation of type coercion in programming
+Type coercion is the automatic conversion of values of a particular data type to a different data type and is vital in programming when handling different data types, when comparing values or when performing operations. Javascript will attempt to make data types compatible by using type coercion in order to complete an operation or comparison.
+
+```js
+var num = 9001;
+var str = "My power level is " + num; // JavaScript uses type coercion to change number to string
+console.log(str); 
+// "My power level is 9001"
+```
+
+```js
+console.log(9001 == "9001"); // JS has used type coercion to convert string to number to enable comparison
+// true
+```
+
+Javascript follows a set of priorities and rules when performing type coercion:
+
+- Numeric Values that are concatenated with str using "+" operator will be automatically coerced from num to str.
+
+- Str values involved in arithmatic operations will be converted automatically to numerical values
+
+- Comparing values with loose equality/inequality ("==" / "!=") operators JS will attempt to automatically coerce the values to make it comparable. Avoid this by using True equality "===".
+
+- Falsey values include false, 0, null, undefined, NaN and empty str.
+
+As opposed to type coercion which is the automatic conversion of values by JS, there is also type conversion which is the explicit converting of value's data types. In other words the developer is intentionally forcing the data type to change by using inbuilt functions or operators of JS. Both type conversion and type coercion have a place in coding and it is important for a developer to understand how their code will react once run. Will there be an implicit conversion that takes place automatically? Will the code not run due to different data types so we might need to force the change explicitly? This is crucial for writing efficient and predictable code that performs operations accurately and as expected.
 
 ## Q9 Explain data types, using examples from the JavaScript programming language
 
-Provides a thorough explanation of data types in programming
+There are 8 different data types used in JavaScript programming language which I will discuss below:
+
+- String
+Strings or str are simply a series of one or more characters created by using single or double quotes at the beginning and end of the str. The quotes need to match, and if a quotation mark exists in the str then the other sort of quotes must be used.
+
+```js
+let strExample = "String using double quotes";
+
+let strExample2 = 'String using single quotes with a "quotation mark" included';
+```
+
+- Number
+Numbers in JavaScript are stored as decimal numbers and can be written either with or without decimals
+
+```js
+let numExample = 7;
+
+let numExample2 = 7.00;
+```
+
+- Bigint
+JS numbers are stored in 64 bit floating point format which means that certain very large numbers are simply to big to be represented by a normal JS number, so thats where Bigint comes in. BigInt enables very large numbers to be stored in JS. BigInt cannot contain decimals.
+
+```js
+let hugeNumber = BigInt("123456789012345678901234567890");
+```
+
+- Boolean
+Booleans are either true or false, that is their only 2 values.
+
+```js
+let coolAnimal = "Wolf";
+let favAnimal = "Wolf";
+let petAnimal = "Dog";
+console.log(coolAnimal == favAnimal)       // true
+console.log(coolAnimal == petAnimal)       // false
+```
+
+- Undefined
+Any variable without a value in JS is undefined as a data type and has the value undefined. Setting the value of a variable to undefined will empty that variable.
+
+```js
+let thinkOfSomethingWitty; // This is undefined as we haven't given a value to variable
+console.log(typeof thinkOfSomethingWitty);
+// undefined
+
+let somethingElseWitty = "Witty!"; // Variable has value
+somethingElseWitty = undefined // We then empty variable by setting value to undefined
+console.log(typeof somethingElseWitty);
+// undefined
+```
+
+- Null
+Where undefined is a variable or object that has not been defined, null represents a value that has been intentionally given a null value. It is often used to indicate that an object does not exist or that a variable has no value.
+
+```js
+let firstName = "Brad"
+let middleName = null
+let lastName = "Archbold"
+```
+
+- Symbol
+Symbols are used to add unique property keys to an object and they are immutable. Symbol() will return a unique symbol every time.
+
+```js
+let symbolEx1 = Symbol();
+let symbolEx2 = Symbol();
+let symbolEx3 = Symbol();
+// These 3 variables will all contain unique symbols
+```
+
+- Object
+Objects are written with {} and are written as name:value pairs
+
+```js
+const person = {firstName:"Brad", lastName:"Archbold", age:36, eyeColor:"blue"};
+console.log(person) //{ firstName: 'Brad', lastName: 'Archbold', age: 36, eyeColor: 'blue' }
+```
 
 ## Q10 Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
@@ -430,9 +581,11 @@ for (model of models) {
 ## References
 
 ### Q1
+
 Safari, H 2020, 'How to use version control systems in large & multi-part software projects?', viewed 23 April 2024, https://www.linkedin.com/pulse/how-use-version-control-systems-large-multi-part-software-hadi-safari/
 
 ### Q2
+
 Bellairs, R 2019, 'What Is Code Quality? Overview + How to Measure Code Quality', viewed 23 April 2024, https://www.perforce.com/blog/sca/what-code-quality-overview
 Javaid, N 2023, 'The Key Qualities of Good Programming Code', viewed 23 April 2024, https://www.linkedin.com/pulse/key-qualities-good-programming-code-nabeel-javaid/
 
@@ -445,15 +598,17 @@ Duggal, N 2024, 'What is MERN stack? All you need to know', viewed 6 April 2024,
 
 LinkedIn 2024, 'You're a web developer and you want to be successful. What skills do you need to have?', viewed 24 April 2024, https://www.linkedin.com/advice/1/youre-web-developer-you-want-successful-what-skills-xxnfe
 
-### Q5
-
-### Q6
-
 ### Q7
+
+Cleary, R 2020, 'Control Flow in JavaScript', viewed 1 May 2024, https://medium.com/@rianna.cleary/control-flow-in-javascript-9c63d0c98bb9#:~:text=Control%20flow%20in%20JavaScript%20is,loops%2C%20conditionals%2C%20or%20functions.
 
 ### Q8
 
+Jha, A 2023, 'Understanding JavaScript: Type Coercion & Type Conversion', viewed 1 May 2024, https://medium.com/@atuljha2402/understanding-javascript-type-coercion-type-conversion-a2ce84c00331#:~:text=Type%20coercion%20refers%20to%20the,complete%20the%20operation%20or%20comparison.
+
 ### Q9
+
+W3 Schools, 'JavaScript Data Types', viewed 1 May 2024, https://www.w3schools.com/js/js_datatypes.asp
 
 ### Q10
 
