@@ -244,7 +244,6 @@ Strings or str are simply a series of one or more characters created by using si
 
 ```js
 let strExample = "String using double quotes";
-
 let strExample2 = 'String using single quotes with a "quotation mark" included';
 ```
 
@@ -253,7 +252,6 @@ Numbers in JavaScript are stored as decimal numbers and can be written either wi
 
 ```js
 let numExample = 7;
-
 let numExample2 = 7.00;
 ```
 
